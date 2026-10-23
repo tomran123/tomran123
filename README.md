@@ -4,7 +4,7 @@
 **AI infrastructure · Inference optimization · Reliable AI applications**
 
 
-[English](#english) · [中文](#中文) · [Intel portfolio](https://github.com/tomran123/intel_cunzhou) · [WealthPortfolio](https://github.com/tomran123/wealthprofolio)
+[English](#english) · [中文](#中文) · [Intel portfolio](https://github.com/tomran123/intel_cunzhou) · [WealthPortfolio](https://github.com/tomran123/wealthprofolio) · [OS-vLLM](https://github.com/tomran123/os_vllm)
 
 
 ## English
@@ -32,6 +32,18 @@ I work on making AI systems faster, measurable, and reliable: heterogeneous infe
 The portfolio contains public FLUX scripts and benchmark reports. Some linked OCR and super-resolution source repositories are private. Results are specific to the documented hardware, configurations, and test samples.
 
 
+#### [OS-vLLM](https://github.com/tomran123/os_vllm)
+**Python · vLLM · Linux / openEuler · Docker · Distributed systems**
+
+A collaborative Prefill–Decode serving prototype for studying LLM scheduling and failure recovery.
+
+- Separate prefill/decode worker pools with prompt-aware routing, health tracking, retries, failover, and supervised restarts.
+- A CPU-only mock stack for fault and load experiments, plus experimental GPU adapters using vLLM's `ExampleConnector` with shared storage.
+- Structured request/recovery logs, concurrent benchmarks, Linux process/IPC inspection and cleanup, and NCCL rebuild experiment tools.
+
+The public repository includes an English architecture guide, a runnable mock quick start, and explicit limits for GPU and cache behavior.
+
+
 #### [WealthPortfolio](https://github.com/tomran123/wealthprofolio)
 **Next.js · TypeScript · FastAPI · PostgreSQL · Celery · RabbitMQ · Redis**
 
@@ -48,7 +60,6 @@ A full-stack asset-management application that combines portfolio accounting wit
 ### Additional systems experience
 
 
-- **OS-vLLM:** built a vLLM Prefill-Decode serving prototype on openEuler with OpenAI-compatible routing, health monitoring, session affinity, retries, and worker recovery. Evaluated 1x1 through 2x2 worker configurations using fault injection and latency/throughput benchmarks.
 - **Pintos:** implemented preemptive priority scheduling, nested priority donation, synchronization, lazy loading, swap, page-fault handling, and clock-based page replacement.
 - **Inspur Enterprise Cloud:** built a hospital appointment prototype using React/TypeScript, Node.js, Express, and PostgreSQL, including JWT authentication and transactional booking-conflict detection.
 
@@ -89,6 +100,18 @@ A full-stack asset-management application that combines portfolio accounting wit
 项目集包含公开的 FLUX 脚本与测试报告；部分 OCR 和超分辨率源码链接指向私有仓库。性能结果对应各报告中的硬件、配置与测试样本。
 
 
+#### [OS-vLLM：Prefill–Decode 推理服务原型](https://github.com/tomran123/os_vllm)
+**Python · vLLM · Linux / openEuler · Docker · 分布式系统**
+
+合作开发的 Prefill–Decode 服务原型，用于研究 LLM 请求调度与故障恢复。
+
+- 独立配置 Prefill/Decode Worker 池，实现面向 Prompt 的路由、健康追踪、重试、故障转移及进程守护重启。
+- 提供 CPU mock 故障与负载实验，以及基于 vLLM `ExampleConnector` 和共享存储的实验性 GPU 适配器。
+- 包含请求/恢复事件日志、并发基准测试、Linux 进程与 IPC 检查清理，以及 NCCL 通信组重建实验工具。
+
+公开仓库提供英文架构说明和可运行的 mock 快速入门，并明确 GPU 与缓存行为的验证边界。
+
+
 #### [WealthPortfolio：全栈资产管理平台](https://github.com/tomran123/wealthprofolio)
 **Next.js · TypeScript · FastAPI · PostgreSQL · Celery · RabbitMQ · Redis**
 
@@ -105,7 +128,6 @@ A full-stack asset-management application that combines portfolio accounting wit
 ### 其他系统工程经历
 
 
-- **OS-vLLM：** 在 openEuler 上构建 vLLM Prefill-Decode 服务原型，实现 OpenAI-compatible 路由、健康监控、会话亲和、重试和 Worker 恢复；通过故障注入及延迟/吞吐量基准评估 1x1 至 2x2 Worker 配置。
 - **Pintos：** 实现抢占式优先级调度、嵌套优先级捐赠、同步机制、懒加载、Swap、缺页处理和 Clock 页面置换。
 - **浪潮企业云：** 使用 React/TypeScript、Node.js、Express 与 PostgreSQL 开发医院预约原型，实现 JWT 鉴权及基于事务的预约冲突检测。
 
